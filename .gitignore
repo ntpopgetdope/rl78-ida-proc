@@ -1,2 +1,5 @@
 .vs
 vs/x64
+# Jump table sequence helper in idasdk < 7.1 
+# gitignore to avoid Ilfak's DMCA minions...
+jptcmn.cpp

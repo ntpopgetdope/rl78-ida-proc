@@ -2197,7 +2197,7 @@ static void fuse_far_ptrs(const insn_t &insn) {
 }
 
 int emu(const insn_t &insn) {
-	uint32 feature = insn.get_canon_feature();
+	uint32 feature = insn.get_canon_feature(PH);
 	bool flow = (feature & CF_STOP) == 0;
 
 	bool flag1 = is_forced_operand(insn.ea, 0);
@@ -2246,7 +2246,6 @@ int emu(const insn_t &insn) {
 }
 
 class out_rl78_t : public outctx_t {
-	out_rl78_t(void) : outctx_t(BADADDR) {} // not used
 public:
 	bool out_operand(const op_t &x);
 	void out_insn(void);
@@ -2493,7 +2492,7 @@ common chunk
 0  br      ax
 */
 //#define JUMP_DEBUG
-#include <jptcmn.cpp>
+#include "jptcmn.cpp"
 static const char rl78_jmp_roots[] = { 1, 2, 0 };
 static const char rl78_jmp_depends[][2] = {
 	{ 1, 2 },	// 0: ax, cs

@@ -2,8 +2,8 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <IDA_SDK_DIR>c:\src\ida\idasdk71\</IDA_SDK_DIR>
-    <IDA_DIR>c:\Program Files\IDA 7.1\</IDA_DIR>
+    <IDA_SDK_DIR>C:\Program Files\IDA Pro 7.5\idasdk75\</IDA_SDK_DIR>
+    <IDA_DIR>C:\Program Files\IDA Pro 7.5\</IDA_DIR>
     <IDA_PROCS_DIR>$(IDA_DIR)procs\</IDA_PROCS_DIR>
     <ida64>false</ida64>
     <ida64 Condition="$(Configuration.EndsWith('64'))">true</ida64>
